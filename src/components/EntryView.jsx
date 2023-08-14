@@ -17,7 +17,7 @@ export default function EntryView({ entry }) {
                         <h2 className='text-lg font-bold text-gray-800 capitalize'>{entry.name}</h2>
                         <p className='font-light capitalize text-md'>{entry.text}</p>
                     </div>
-                    <button className='px-3 py-1 text-blue-500 rounded-xl bg-violet-50'>{entry.category}</button>
+                    <div className='px-3 py-1 text-blue-500 rounded-xl bg-violet-50 w-fit'>{entry.category}</div>
                 </div>
             </div>
             <div className='flex items-center justify-center'>

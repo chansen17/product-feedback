@@ -1,12 +1,8 @@
 import React from 'react'
-import { items } from '../data';
-import { state } from '../store';
 import { FaLightbulb } from 'react-icons/fa';
 import List from '../components/List';
 
 export default function Homepage() {
-
-  const entries = state.filter !== null ? items.filter(item => item.category.toLowerCase() === state.filter.toLowerCase()) : items;
 
   return (
     <div className='lg:col-span-9'>
@@ -29,7 +25,7 @@ export default function Homepage() {
             </div>
         </div>
 
-        <List entries={entries} />
+        <List />
     </div>
   )
 }

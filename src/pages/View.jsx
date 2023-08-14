@@ -1,16 +1,16 @@
 import React from 'react'
+import { state } from '../store'
 import { useLocation } from 'react-router-dom'
 import { FaChevronLeft } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { items } from '../data'
 import ListItem from '../components/ListItem'
 import EntryView from '../components/EntryView'
 
 export default function View() {
-    const { state } = useLocation();
-    const id = state.id;
+    const location = useLocation();    
+    const id = location.state.id;
 
-    const item = items.filter(item => item.id === id);
+    const item = state.entries.filter(item => item.id === id);
     let entry = item[0]
 
   return (

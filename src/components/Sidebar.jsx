@@ -1,14 +1,8 @@
 import React from 'react'
-import { state } from '../store'
 import { Link } from 'react-router-dom'
-
-let categories = ['all', 'ui', 'ux', 'enhancement', 'bug', 'feature']
+import Filter from './Filter';
 
 export default function Sidebar() {
-
-    const handleFilter = (payload) => {
-        state.filter = payload;
-    }
 
   return (
     <div className='h-auto space-y-6 lg:col-span-3'>
@@ -16,13 +10,7 @@ export default function Sidebar() {
             <h2 className='text-lg font-medium text-white md:text-xl'>Frontend Mentor</h2>
             <p className='text-sm font-light text-gray-200'>Feedback Board</p>
         </div>
-        <div className='h-auto px-5 py-8 bg-white rounded-xl'>
-            <div className="flex flex-wrap gap-2">
-                {categories.map((c, i) => (
-                    <button onClick={() => handleFilter(c)} key={i} className='px-3 py-1 font-medium text-blue-600 capitalize shadow-xl shadow-violet-100 bg-violet-100 rounded-xl'>{c}</button>
-                ))}
-            </div>
-        </div>
+        <Filter />
         <div className='h-auto px-5 py-8 space-y-4 bg-white rounded-xl'>
             <div className="flex items-center justify-between gap-3">
                 <h2 className='text-lg font-bold text-gray-700 md:text-xl'>Roadmap</h2>
