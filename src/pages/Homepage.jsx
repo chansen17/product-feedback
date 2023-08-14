@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaLightbulb } from 'react-icons/fa';
 import List from '../components/List';
+import { state } from '../store';
 
 export default function Homepage() {
 
@@ -11,7 +12,7 @@ export default function Homepage() {
                 
                 <div className='flex items-center gap-3 font-bold text-white'>
                     <FaLightbulb />
-                    <p>6 Suggestions</p>
+                    <p>{state.entries.length} Suggestions</p>
                 </div>
 
                 <button className='flex items-center gap-3 px-4 py-3 text-white bg-none'>

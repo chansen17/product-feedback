@@ -1,11 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { state } from '../store';
 
 export default function Filter() {
+    const navigate = useNavigate();
 
     const handleFilter = (id) => {
         state.filter = id;
-        console.log(state.filter)
+
+        navigate('/');
+
     }
 
   return (

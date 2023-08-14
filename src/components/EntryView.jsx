@@ -2,10 +2,14 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import { BiMessageRounded } from 'react-icons/bi';
 import { FaChevronUp } from 'react-icons/fa';
+import Comments from './Comments';
+import ScrollToTop from './ScrollToTop';
 
 export default function EntryView({ entry }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0}} transition={{ type: 'tween', duration: .5 }} className='h-auto px-5 py-8 duration-200 bg-white rounded-2xl group-hover:bg-gradient-to-br group-hover:from-violet-50 group-hover:to-rose-100'>
+    <>
+    <ScrollToTop />
+    <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0}} transition={{ type: 'tween', duration: .5 }} className='h-auto px-5 py-8 space-y-12 duration-200 bg-white rounded-2xl group-hover:bg-gradient-to-br group-hover:from-violet-50 group-hover:to-rose-100'>
         <div className="flex items-center justify-between gap-6">
             <div className='flex items-center gap-6 space-y-3 md:gap-12'>
                 <div className='flex flex-col items-center px-3 py-2 bg-violet-100 rounded-2xl'>
@@ -27,6 +31,8 @@ export default function EntryView({ entry }) {
                 </div>
             </div>
         </div>
+        <Comments comments={entry.comments} />
     </motion.div>
+    </>
   )
 }

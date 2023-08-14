@@ -5,6 +5,7 @@ import { FaChevronLeft } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import ListItem from '../components/ListItem'
 import EntryView from '../components/EntryView'
+import Comments from '../components/Comments'
 
 export default function View() {
     const location = useLocation();    
