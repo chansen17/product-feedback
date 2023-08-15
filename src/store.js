@@ -39,7 +39,7 @@ export const state = proxy({
           name: 'add tags for solutions',
           text: 'easier to search for solutions on a specific stack.',
           category: 'enhancement',
-          commentCount: 5,
+          commentCount: '',
           voteCount: 175,
           comments: [
             {
@@ -65,7 +65,7 @@ export const state = proxy({
           name: 'dark mode option',
           text: 'provide an option for users who prefer dark mode.',
           category: 'ux',
-          commentCount: 5,
+          commentCount: '',
           voteCount: 99,
           comments: [
             {
@@ -99,7 +99,7 @@ export const state = proxy({
           name: 'improve mobile responsiveness',
           text: 'ensure the app works seamlessly on various mobile devices.',
           category: 'bug',
-          commentCount: 1,
+          commentCount: '',
           voteCount: 22,
           comments: [
             {
@@ -125,7 +125,7 @@ export const state = proxy({
           name: 'integration with third-party tools',
           text: 'allow users to connect their favorite tools for more productivity.',
           category: 'feature',
-          commentCount: 7,
+          commentCount: '',
           voteCount: 112,
           comments: [
             {
@@ -159,7 +159,7 @@ export const state = proxy({
           name: 'add voting system',
           text: 'let users upvote/downvote suggestions to prioritize feedback.',
           category: 'enhancement',
-          commentCount: 3,
+          commentCount: '',
           voteCount: 65,
           comments: [
             {
@@ -185,7 +185,7 @@ export const state = proxy({
           name: 'bug report feature',
           text: 'create a dedicated section for users to report and track bugs.',
           category: 'ui',
-          commentCount: 1,
+          commentCount: '',
           voteCount: 24,
           comments: [
             {
@@ -219,7 +219,7 @@ export const state = proxy({
             name: 'improve user onboarding process',
             text: 'create a more intuitive onboarding flow for new users to easily understand the app.',
             category: 'ui',
-            commentCount: 2,
+            commentCount: '',
             voteCount: 42,
             comments: [
               {
@@ -245,7 +245,7 @@ export const state = proxy({
             name: 'real-time collaboration feature',
             text: 'allow multiple users to work together on the same document in real-time.',
             category: 'feature',
-            commentCount: 4,
+            commentCount: '',
             voteCount: 78,
             comments: [
               {
@@ -275,4 +275,8 @@ export const state = proxy({
             ]
           }
       ]
+  });
+
+  state.entries.forEach(entry => {
+    entry.commentCount = entry.comments.length;
   });
